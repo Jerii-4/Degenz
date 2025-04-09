@@ -1,12 +1,16 @@
 import React from "react";
-import "./App.css";
-import HomePage from "./pages/homepage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CatePage from "./pages/catepage";
 
 function App() {
   return (
-    <>
-      <HomePage />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/categories" element={<CatePage />} />
+      </Routes>
+    </Router>
   );
 }
 
