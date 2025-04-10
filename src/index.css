@@ -1,4 +1,26 @@
 @import "tailwindcss";
-
 @tailwind utilities;
 
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: fadeIn 0.3s ease-out both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
