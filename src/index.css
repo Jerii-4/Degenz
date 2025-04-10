@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-@keyframes slideFromBottom {
+/* Card-dealing animation from bottom */
+@keyframes dealFromBottom {
   0% {
     transform: translateY(100%) scale(0.5);
     opacity: 0;
@@ -12,15 +13,6 @@
   }
 }
 
-.animate-slide-up {
-  animation: fadeIn 0.3s ease-out both;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.animate-deal-from-bottom {
+  animation: dealFromBottom 0.5s ease-out both;
 }
